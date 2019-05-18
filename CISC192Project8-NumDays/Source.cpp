@@ -19,6 +19,8 @@ class numDays
 {
 private:
 	double convertedDays;
+	double workHoursGiven;
+	double roundedDays;
 
 
 
@@ -27,8 +29,14 @@ public:
 	void convertHours(double hoursGiven)
 	{
 		convertedDays = hoursGiven / 8;
-		double roundedDays = round(convertedDays * 100) / 100;
+		workHoursGiven = hoursGiven;
+		roundedDays = round(convertedDays * 100) / 100;
 		cout << "\n" << hoursGiven << " converts to " << roundedDays << " work days." << endl;
+	}
+
+	void getDays()
+	{
+		cout << "\nThe number of work days for " << workHoursGiven << " is " << roundedDays << endl;
 	}
 
 };
