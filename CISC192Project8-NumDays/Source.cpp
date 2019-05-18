@@ -18,10 +18,17 @@ using namespace std;
 class numDays
 {
 private:
+	double convertedDays;
 
 
 
 public:
+
+	void convertHours(double hoursGiven)
+	{
+		convertedDays = hoursGiven / 8;
+		cout << hoursGiven << " converts to " << convertedDays << " work days." << endl;
+	}
 
 };
 
@@ -36,6 +43,9 @@ int main()
 	{
 		cout << "Please enter the number of work hours: ";
 		cin >> hoursGiven;
+
+		numDays numDay1;
+		numDay1.convertHours;
 
 	} while (choice == 'y' || choice == 'Y');
 
