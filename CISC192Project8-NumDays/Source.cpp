@@ -27,7 +27,8 @@ public:
 	void convertHours(double hoursGiven)
 	{
 		convertedDays = hoursGiven / 8;
-		cout << hoursGiven << " converts to " << convertedDays << " work days." << endl;
+		double roundedDays = round(convertedDays * 100) / 100;
+		cout << "\n" << hoursGiven << " converts to " << roundedDays << " work days." << endl;
 	}
 
 };
@@ -45,7 +46,13 @@ int main()
 		cin >> hoursGiven;
 
 		numDays numDay1;
-		numDay1.convertHours;
+		numDay1.convertHours(hoursGiven);
+
+
+		//see if the user wants to continue and continue if desired
+		cout << "\n\nWould you like to check another phone number? (Y/N): ";
+		cin >> choice;
+		cout << endl;
 
 	} while (choice == 'y' || choice == 'Y');
 
